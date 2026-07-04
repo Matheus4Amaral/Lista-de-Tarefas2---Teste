@@ -42,7 +42,10 @@ Se o site não abrir corretamente, verifique se o processo do Vite está rodando
 ## Recomendação de extensões
 
 - ES7+ React/Redux/React-Native snippets
+- Tailwind CSS IntelliSense
+- ESLint
 - Error Lens
+- Prettier - Code formatter
 
 ## Para construção/testes, não é obrigatório seguir com os comandos adiante
 
@@ -62,3 +65,4 @@ npm run preview
 
 ```bash
 npm run lint
+```
