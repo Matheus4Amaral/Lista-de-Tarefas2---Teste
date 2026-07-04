@@ -26,7 +26,7 @@ function App() {
     setTasks(newTasks);
   };
 
-  const completeTasks = (id) => {
+  const onCompleteTasksClick = (id) => {
     const newTasks = [...tasks];
     newTasks.map((tasks) =>
       tasks.id === id ? (tasks.isCompleted = !tasks.isCompleted) : tasks,
@@ -34,7 +34,7 @@ function App() {
     setTasks(newTasks);
   };
 
-  const removeTasks = (id) => {
+  const onDeleteTasksClick = (id) => {
     const newTasks = [...tasks];
     const filteredTasks = newTasks.filter((tasks) =>
       tasks.id != id ? tasks : null,
@@ -68,8 +68,8 @@ function App() {
             <Tasks
               key={tasks.id}
               tasks={tasks}
-              removeTasks={removeTasks}
-              completeTasks={completeTasks}
+              onDeleteTasksClick={onDeleteTasksClick}
+              onCompleteTasksClick={onCompleteTasksClick}
             />
           ))}
       </div>

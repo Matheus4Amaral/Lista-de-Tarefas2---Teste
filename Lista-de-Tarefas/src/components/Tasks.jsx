@@ -1,4 +1,4 @@
-const Tasks = ({ tasks, removeTasks, completeTasks }) => {
+const Tasks = ({ tasks, onDeleteTasksClick, onCompleteTasksClick }) => {
   return (
     <div className="bg-white shadow p-4 mb-4 rounded flex justify-between items-center">
       <div>
@@ -17,13 +17,13 @@ const Tasks = ({ tasks, removeTasks, completeTasks }) => {
       <div className="flex items-center">
         <button
           className="bg-green-500 text-white px-3 py-1 rounded text-sm"
-          onClick={() => completeTasks(tasks.id)}
+          onClick={() => onCompleteTasksClick(tasks.id)}
         >
           Completar
         </button>
         <button
           className="bg-red-500 text-white px-3 py-1 rounded text-sm ml-3"
-          onClick={() => removeTasks(tasks.id)}
+          onClick={() => onDeleteTasksClick(tasks.id)}
         >
           x
         </button>
