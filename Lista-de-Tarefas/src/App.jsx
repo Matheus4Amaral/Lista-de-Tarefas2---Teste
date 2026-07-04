@@ -15,7 +15,6 @@ function App() {
 
   const onAddTasksSubmit = (text, category) => {
     const newTasks = [
-      ...tasks,
       {
         id: tasks.length + 1,
         text,
@@ -23,7 +22,7 @@ function App() {
         isCompleted: false,
       },
     ];
-    setTasks(newTasks);
+    setTasks([...tasks, ...newTasks]);
   };
 
   const onCompleteTasksClick = (id) => {
