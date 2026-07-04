@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-const TasksForm = ({ addTasks }) => {
+const TasksForm = ({ onAddTasksSubmit }) => {
   const [value, setValue] = useState("");
   const [category, setCategory] = useState("");
 
@@ -9,7 +9,7 @@ const TasksForm = ({ addTasks }) => {
     if (!value || !category) return;
     //console.log("Enviou formulário com sucesso!")
     //console.log("Título: ", value, "Categoria: ", category)
-    addTasks(value, category);
+    onAddTasksSubmit(value, category);
     setValue("");
     setCategory("");
   };

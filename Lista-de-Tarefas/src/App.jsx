@@ -13,7 +13,7 @@ function App() {
   const [filter, setFilter] = useState("All");
   const [sort, setSort] = useState("Asc");
 
-  const addTasks = (text, category) => {
+  const onAddTasksSubmit = (text, category) => {
     const newTasks = [
       ...tasks,
       {
@@ -74,7 +74,7 @@ function App() {
           ))}
       </div>
 
-      <TasksForm addTasks={addTasks} />
+      <TasksForm onAddTasksSubmit={onAddTasksSubmit} />
     </div>
   );
 }
