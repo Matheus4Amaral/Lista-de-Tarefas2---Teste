@@ -17,7 +17,7 @@ function App() {
     const newTasks = [
       ...tasks,
       {
-        id: Math.floor(Math.random() * 10000000),
+        id: tasks.length + 1,
         text,
         category,
         isCompleted: false,
